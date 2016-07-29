@@ -75,7 +75,8 @@ For Windows, download Firefox for your operating system and language at <a href=
 On Linux distributions, Firefox should already be installed.</p>
 
 <p><h3>Extensions</h3>
-<p>A general-purpose browser is certain to make your identity, location and activity available. However, there are some extensions we can use to increase our privacy and security somewhat.</p>
+<p>A general-purpose browser is certain to make your identity, location and activity available. However, there are some extensions we can use to increase our privacy and security somewhat.<br>
+You can install these extensions directly in your browser: click on the menu, then <i>Add-ons</i> > <i>Get Add-ons</i> and use the search bar to find the extensions.</i></p>
 <p>We particularly recommend the following open source extensions:
 <ul>
 <li><b>HTTPS Everywhere</b>: forces encryption for all connections between your web browser and the webserver you are visiting.<br>
@@ -91,7 +92,6 @@ On Linux distributions, Firefox should already be installed.</p>
 <li><b>NoScript</b>: blocks JavaScript. JavaScript is an essential element of many websites, but can be exploited to track your browsing behaviour, leak your passwords, and to inject malware. NoScript is very effective but you will need to grant or deny privileges on a per website basis depending on how much you trust them.<br>
 <a href="https://noscript.net/" target="blank">https://noscript.net/</a></li>
 </ul></p>
-<p><h2>>>> add more browser plugins</h2></p>
 
 <hr/>
 
@@ -239,10 +239,15 @@ Jabber password, as it may not be saved securely.
 </ul>
 </td></tr></table>
 
-<h3>The risks</h3>
-<p>For protection against most non-state level actors, using a very strong password is a good defence against unauthorised access to your email account. However, for state level actors, it may be no defence at all.</p>
+<h3>Email provider</h3>
 <p>An email provider that is "trustworthy" is one who has a good basic security infrastructure, and who won't hand over your data to an intelligence agency in a hurry. If you do not trust the country where the email provider is based, it is best not to use an email address there. For example, we know that the default position of the US and UK intelligence agencies is to record and store as many email communications as possible. Even if you don't feel your email communications to be of relevance to these agencies now, they will be retroactively accessible should you and/or your work become relevant in the
 future. So, if you don't trust the US approach to email privacy, be aware that the email providers based there (Outlook, Gmail, Riseup, etc....) may be subject to that approach. Some email providers are thought to be more co-operative than others, but unless you run your own server (or the organisation you work for runs their own server in a country with good privacy laws, like Switzerland or Iceland), we should assume that your emails and email metadata are not secure with any email provider. Other considerations are whether you have to hand over your mobile phone number, a postcode/address, or another of your email addresses in order to register an account with a provider, as you may want to avoid donating that information in future (and especially if/when you use an anonymous email address).<p>
+
+<h3>Email metadata</h3>
+<p>Metadata is data about data. Email metadata includes both the sender's and recipient's names, emails and IP addresses, server transfer information, date, time and time zone, unique identifier of email and related emails, content type and encoding, mail client login records with IP address, priority and categories, subject of email, status of the email, and any read receipt request.<p>
+<p>This information is extensive and revealing alone, but many intelligence and law enforcement agencies (and in some cases, individual hackers) are also able to retrieve the full email content.
+You can't easily protect the metadata of your emails, so you should be minimalistic or obsfucatory in your subject line, and you may wish to hide your real location/IP address by using the Tor browser.</p>
+<p>Note that email encryption does not hide metadata such as who you are talking to, the email subject, or your location (though you can hide your real location by using Tor/Tails). For people at all risk levels, it is a good idea to be minimalistic or obsfucatory in your subject line.</p>
 
 <h3>Email encryption</h3>
 
@@ -250,14 +255,8 @@ future. So, if you don't trust the US approach to email privacy, be aware that t
 <p>The following instructions recommend the GNU Privacy Guard, "GPG" (an open source implementation of Pretty Good Privacy, or PGP).<br>
 Using GPG, whilst very different to normal emailing, is not difficult and you will get used to it very quickly. Understanding exactly how it works, however, is slightly more challenging.</p>
 <p>You can't encrypt or decrypt email from your smart phone. Whilst it is possible to set up on some Android phones, it is highly inadvisable because mobile phones are fundamentally insecure anyway.<br>
-Neither can you encrypt or decrypt mail in your web browser (unless you are using the Tails operating system) – you will use the Thunderbird email client on your desktop, with the added encryption software, to encrypt and decrypt mail.</p>
+Neither can you encrypt or decrypt mail in your web browser (unless you are using the Tails operating system): you will use the Thunderbird email client on your desktop, with the added encryption software, to encrypt and decrypt mail.</p>
 <p>Finally, you can only send encrypted emails to other people who also use encrypted email. This used to be a rather small community of people but in a post-Snowden world, it is growing exponentially.</p>
-
-<h3>Email metadata</h3>
-<p>Metadata is data about data. Email metadata includes both the sender's and recipient's names, emails and IP addresses, server transfer information, date, time and time zone, unique identifier of email and related emails, content type and encoding, mail client login records with IP address, priority and categories, subject of email, status of the email, and any read receipt request.<p>
-<p>This information is extensive and revealing alone, but many intelligence and law enforcement agencies (and in some cases, individual hackers) are also able to retrieve the full email content.
-You can't easily protect the metadata of your emails, so you should be minimalistic or obsfucatory in your subject line, and you may wish to hide your real location/IP address by using the Tor browser.</p>
-<p>Note that email encryption does not hide metadata such as who you are talking to, the email subject, or your location (though you can hide your real location by using Tor/Tails). For people at all risk levels, it is a good idea to be minimalistic or obsfucatory in your subject line.</p>
 
 <h3>Key pairs</h3>
 <p>Keys are essentially unique long sets of numbers, and each user of email encryption has a key pair: a public key, and a private key.</p>
@@ -289,6 +288,7 @@ You will need to download:
 The first pink download box, <i>Download GPG suite</i> will be the latest version, click on it to download. Click on the download when complete, and follow the wizard to install.<br>
 When the downloads are complete, open Thunderbird from your Downloads and drag the Thunderbird icon into the Applications folder.</ul></p>
 <p><b>Windows</b>:<br>
+Download Thunderbird email client and GPG encryption software<br>
 You will need to download:
 <ul>
 <li>An email client/mail manager for your desktop: Mozilla's open source 'Thunderbird'<br>
@@ -310,10 +310,8 @@ The first green download box will be the latest version of GPG: click on it to d
 <b>Note</b>: if you are using an anonymous email address, obviously, do not enter your real name!<br>
 <b>4.</b> Click <i>Continue</i>.<br>
 You should see, <i>Configuration found in Mozilla ISP database</i>.<br>
-<b>Troubleshooting</b>: If you receive the error message, <i>Configuration cannot be verified</i>, it may be because your email provider uses two-factor verification (e.g. lots of Gmail accounts use "2-step" verification). In this case, you mail provider may email you, or present a web browser, with a notification of an attempted login via a mail client, and ask for your authentication.<br>
-Alternatively, some Gmail users who use 2-step verification may need obtain an "application-specific password". You can do this on the 'authorizing applications and sites' page on your Google Account settings. For more information, visit: <a href="https://support.google.com/mail/answer/1173270?hl=en" target="blank">https://support.google.com/mail/answer/1173270?hl=en</a><br>
 <b>5.</b> You now have the option to choose between IMAP or POP3. Choose IMAP if you use webmail, and click <i>Done</i>.<br>
-<b>Expert info</b>: Unlike POP, IMAP offers two-way communication between your online email account and your desktop email client – so any changes you make in your email client are communicated back to your online account (e.g. if you mark an email as 'read' on Thunderbird, with IMAP, it will appear as 'read' on your webmail too).</p></li>
+<b>Expert info</b>: Unlike POP, IMAP offers two-way communication between your online email account and your desktop email client, so any changes you make in your email client are communicated back to your online account (e.g. if you mark an email as 'read' on Thunderbird, with IMAP, it will appear as 'read' on your webmail too).</p></li>
 
 <li><p><b>Enigmail security extension</b></p>
 At the top of the Thunderbird window, click on <i>Tools</i> > <i>Add-ons</i> > <i>Extensions</i>. If you see <i>Enigmail</i>, you already have Enigmail. If not, go to the search bar in the
@@ -345,13 +343,12 @@ Go back into Thunderbird to change some settings.<br>
 - <i>All usable keys</i>, under <i>To send encrypted, accept</i>
 - <i>Always</i>, under <i>Confirm before sending</i><br>
 <b>N.B.</b> this is a very useful tool that tells you every time you send an email whether the email is signed and encrypted, so you are much less likely to accidently send an unencrypted email</li>
-<li>Key Selection: Tick <i>By Per-Recipient Rules</i>, <i>By Email Addresses according to Key Manager</i>, and <i>Manually if Keys are Missing</i><br>
-<b>Advanced</b>: we recommended that you tick <i>Re-wrap signed HTML text before sending</i> as HTML text does not work well with encrypted
-emails.</li></ul>
+<li><i>Key Selection</i>: Tick <i>By Per-Recipient Rules</i>, <i>By Email Addresses according to Key Manager</i>, and <i>Manually if Keys are Missing</i><br>
+<li><i>Advanced</i>: we recommended that you tick <i>Re-wrap signed HTML text before sending</i> as HTML text does not work well with encrypted emails.</li></ul>
 Click <i>Ok</i>.<br></p>
 <p><b>2.</b> Saving folders locally<br>
 This is particularly useful for saving drafts: you don't want your draft, unencrypted emails being saved on your online mail folders. Rather, you should save them locally on your hard disk to have more control over their security.<br>
-<ul><li>In the menu bar on the left hand side of the Thunderbird window, you will see all your email folders. At the bottom, are <i>Local Folders</i> – right click and select <i>New Folder</i>. Creating <i>Sent</i> and <i>Draft</i> local folders may be helpful.</li>
+<ul><li>In the menu bar on the left hand side of the Thunderbird window, you will see all your email folders. At the bottom, are <i>Local Folders</i>: right click and select <i>New Folder</i>. Creating <i>Sent</i> and <i>Draft</i> local folders may be helpful.</li>
 <li>Click <i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i> > <i>Copies & Folders</i>. You can select where to store your messages here. For example, under <i>Drafts and Templates</i>, select <i>Local Folders</i> as the location to keep your message drafts.</li>
 <li>In the same window [<i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i>] click <i>OpenPGP Security</i> tick <i>Encrypt draft messages on saving</i>.</li></ul></p>
 <p><b>3.</b> Email in plain text<br>
