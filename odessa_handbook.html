@@ -364,7 +364,7 @@ Tick <i>sign encrypted messages by default</i>. If you wish, you may select <i>S
 <h3>Publicly list your public key</h3>
 <p>Uploading your public key to the keyserver is like listing your phone number in a phonebook. It allows people to search for your name/email address, and locate your public key in order to send you an encrypted email. This is very useful for journalists who invite encrypted mail and wish to protect source confidentiality.</p>
 <p>However, if you are setting up encryption for an anonymous email address that you will use only to communicate with specific, high risk individuals, of course there is little to gain from uploading your public key to the keyserver.</p>
-<h3>DISCLAIMER DISCLAIMER DISCLAIMER</h3>
+<b>We do not recommend uploading your first key to the server immediately after you have generated it. In the process of learning, people often compromise their first key pair or lose access to it. If you can afford taking some time to get used to email encryption, consider not publishing your key during the learning process. Instead, try to send encrypted emails (to friends, colleagues) on a regular basis and upload your key to the keyserver after a few weeks of practice.</b>
 <b>1.</b> Go to <i>Enigmail</i> > <i>Key management</i>.<br>
 <b>2.</b> Tick <i>Display All Keys by Default</i>.<br>
 <b>3.</b> Right click your email address, and select <i>Upload Public Keys to Keyserver</i> if you want people to be able to contact you.<br>
@@ -373,7 +373,8 @@ The default keyserver (pool.sks-keyservers.net) is fine.</p>
 <h3>To search for anyone's public key</h3>
 <p>Search for a name/email address to see if a person has a public key listed, so you can send them encrypted mail (like searching for a number in a phonebook).</p>
 <p><i>Enigmail</i> > <i>Key management</i> > <i>Keyserver</i> (in the top toolbar) > <i>Search for keys</i>.<br>
-Enter the person's name or email address and browse the results. Tick the email address of anyone whose key you'd like to import and press ok.</p>
+Enter the person's name or email address and browse the results. Tick the email address of anyone whose key you'd like to import and press ok.<br>
+Don't forget to verify the fingerprint before using the key!</p>
 
 <h3>Import a key</h3>
 <p>If you already have your contact's key on a file or online, but need to import it to your key manager on Thunderbird.
@@ -390,10 +391,10 @@ A public key block looks like this: <a href="http://pool.sks-keyservers.net/pks/
 
 <h3>Verifying keys</h3>
 <p>Make sure that the person you think you are communicating with is certainly who they say they are.</p>
-<p>In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i> > right-click a selected email address > <i>Key Properties</i>. Here you will see the person's key ID and fingerprint.<p>
-<p>You can verify that the key does indeed belong to the person by exchanging fingerprints by another communication means (in person, on the phone, on their business card/website), and checking they match exactly.</p>
-<p>In the same window you can then click <i>Select Action</i> > <i>Set Owner Trust</i> > and select how much you trust that the key does in fact belong to the individual concerned.
-<h1>ADD SIGNING</h1>
+<p>In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i> > right-click a selected email address > <i>Key Properties</i>. Here you will see the person's key fingerprint.<p>
+<p>You can verify that the key does indeed belong to the person by exchanging fingerprints by another communication means (ideally in person, if not possible, on the phone, on their website), and checking they match exactly.</p>
+<p>In the same window you can then click <i>Certify</i> > select if and how well you have checked the fingerprint. To avoid uploading this signature by mistake on the keyservers, we recommend cheching the <i>Local signature</i> box. Then click <i>OK</i>.<br>
+<p>In the same windows you can also click <i>Change</i> and select how much you trust that the key does in fact belong to the individual concerned. Then click <i>OK</i>.</p>
 
 <h3>Send an encrypted email!</h3>
 <p>When you have completed the set up, send a test email to someone else who has encrypted mail. Import their key or find it on the keyserver, and be sure to verify it and sign your trust of their key before you try to send an email.</p>
