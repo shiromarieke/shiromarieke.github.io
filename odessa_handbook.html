@@ -1,0 +1,457 @@
+Contents
+
+Chapter 2: Operating System 19
+Linux/Ubuntu 20
+
+Cloning Tails USB sticks 27
+Upgrading Tails 27
+Using Tails 28
+Using Tails via bridges/circumventing censorship 28
+Creating a persistent volume 29
+Using KeePassX 29
+Email in Tails 30
+OpenPGP Encryption Applet 31
+
+
+Chapter 4: Data 37
+VeraCrypt 37
+Encrypt a file with VeraCrypt 38
+Encrypting hard drives 42
+Sharing data securely 42
+Securely deleting files 45
+Physical erasure 45
+Metadata 46
+
+
+Chapter 7: Phones and Voice/Video Calling Over Internet
+62
+Mobile security 62
+Internet voice and video calling 64
+
+Chapter 8: Passwords 66
+Password cracking: understanding the risk 66
+How to create a strong password 67
+
+
+Commissioned by the Centre for Investigative Journalism and shortened by Katrin Rönicke
+and Marie Gutbub. Creative Commons Licence. (CC BY-NC- SA 4.0)
+
+
+Disclaimer
+Despite the fact that the pervasive surveillance of law-abiding citizens almost certainly
+contravenes international human rights laws, use of certain privacy tools can be illegal.
+Several of the privacy tools discussed in this handbook are cryptographic tools. This
+cryptography may be illegal, or require a license, in several countries including China,
+Cuba, Iran, Libya, Malaysia, North Korea, Singapore, Sudan, and Syria. When entering
+some of these countries, you may need to declare any encryption technology on your
+laptop. You should consider the legal implications of using cryptography and make
+informed decisions about where and when it is safe for you to do so. You can find out more
+about cryptography laws for each country here: http://www.cryptolaw.org
+
+Since attack technologies are always
+changing and much of their use is entirely secret, we rarely confidently know the exact
+threats; when, where and to whom they apply; or the efficacy of our defences.
+Therefore, it is down to you to perform a personal risk assessment and design an
+appropriate defensive response during the course of reading this book. You may also want
+to factor in practicalities – some users may compromise their InfoSec, whilst aware of the
+risks, to meet other practical demands in their work, whereas some users practise
+sophisticated InfoSec above their perceived need because they find it practically doable.
+Some basic questions you may wish to ask yourself when threat modelling for your
+InfoSec strategies are:
+1. Who could your adversaries or potential attackers be?
+2. What tools might your potential attackers possess?
+3. How likely is your potential attacker to use their available tools against
+you?
+4. What risks could arise, for you and those you communicate/work with,
+from a targeted attack?
+5. What risks arise from passive surveillance? How extensive are the tools
+used in passive surveillance?
+6. What defence strategies are practical, safe, and effective in light of your
+evaluated risks?
+7. What defence strategies are practical, safe, effective, and instructible for
+my sources and colleagues, in light of their evaluated risks and/or the risks incurred by
+our communication?
+The threats will change, with time – but so too will the technologies available to protect
+journalists and citizens. So, it is important to understand InfoSec in theory, and to always
+continue learning about InfoSec in practice.
+
+Your security and/or encryption methods will only be effective if each level of your system
+is secure. You can send your emails with unbreakable encryption, or use the strongest
+conceivable passwords, but if your system is hacked, or otherwise vulnerable, your efforts
+may be futile, as your encryption can be circumvented without any need to break it.
+Depending on your risk level and the sophistication of your adversary, protection strategies
+range from simply keeping your laptop or phone on you at all times, to using a second-
+hand, cash-bought, laptop and practising robust InfoSec, during a specific project.
+
+<hr/>
+<hr/>
+<hr/>
+
+<h1>Chapter 1: Safe Browsing</h1>
+
+<p>A web browser is the software you use to access the World Wide Web. For many
+of us, web browsing is 'The Internet', and in many senses it is a window to the
+world.</p>
+
+<table border ="1" cellspacing="1" cellpadding="10"><tr><td>
+<h3>Web browsing risks:</h3>
+<ul>
+<li>Data collection of your identity</li>
+<li>Data collection of your browsing behaviours, including the pages you have visited, and when</li>
+<li>Data collection of your passwords and autofill information</li>
+<li>Data collection of your location (and previous locations)</li>
+<li>Malware (malicious software, sometimes spyware) injections</li>
+<li>Being blocked from accessing certain sites</li>
+Being blocked from using anonymous browsers</li>
+</ul>
+<h3>InfoSec action:</h3>
+<ul>
+<li>Use a general purpose browser, with privacy-enhancing extensions, for daily activities</li>
+<li>Use the Tor browser for anonymous browsing, for censorship resistance, and to hide your real location</li>
+</ul>
+</td></tr></table>
+
+<p><h2>Firefox</h2>
+A popular open source web-browser<br>
+For Windows, download Firefox for your operating system and language at <a href="https://www.getfirefox.com" target="blank">www.getfirefox.com</a>.<br>
+On Linux distributions, Firefox should already be installed.</p>
+
+<p><h3>Extensions</h3>
+<p>A general-purpose browser is certain to make your identity, location and activity available. However, there are some extensions we can use to increase our privacy and security somewhat.</p>
+<p>We particularly recommend the following open source extensions:
+<ul>
+<li><b>HTTPS Everywhere</b>: forces encryption for all connections between your web
+browser and the webserver you are visiting.<br>
+<a href="https://www.eff.org/https-everywhere" target="blank">https://www.eff.org/https-everywhere</a></li>
+<li><b>NoScript</b>: blocks JavaScript. JavaScript is an essential element of many websites, but can be exploited to track your browsing behaviour, leak your passwords, and to inject malware. NoScript is very effective but you will need to grant or deny privileges on a per website basis depending on how much you trust them.<br>
+<a href="https://noscript.net/" target="blank">https://noscript.net/</a></li>
+</ul></p>
+<p><h2>>>> add more browser plugins</h2></p>
+
+<hr/>
+
+<h2>Tor</h2>
+<a href="https://www.torproject.org/" target="blank">https://www.torproject.org/</a>
+
+<h3>About Tor</h3>
+<p>The Tor browser was especially designed for anonymity by routing all its traffic through the Tor network. Therefore, this browser prevents internet providers storing accurate information about your web browsing history.</p>
+<p>The Tor network is a global network of computers called Tor nodes that have encrypted connections with each other. When the Tor browser starts, it will connect to one of these nodes. This node will connect to a second node that will in turn connect to a third node. These nodes could be anywhere in the world, and the first and third node will not be aware of each other. The third node will connect to the wider internet and fetch webpages from the sites you're visiting.</p>
+<p>Those sites will not be able to see where you are or who you are (as long as you do not identify yourself by logging into services associated with your real identity).</p>
+
+<p><h2>>>> add pics</h2></p>
+
+<h3>Staying anonymous</h3>
+<p>The latest version of the Tor browser gives users a security slider to determine their security options. In the Tor browser, click on the green onion (to the left of the address bar) and select <i>Privacy and Security Settings</i> to see the slider and the various options. The slider is set to low by default, which increases usability.<br>
+To benefit from the high level of privacy that Tor can offer, or if you need to browse anonymously, you should set the slider to the highest level.</p>
+<p>Do not open documents (such as .doc and .pdf) downloaded via Tor while still being online. These document formats can contain elements that independently connect to the internet, thereby revealing your real IP address. Make sure you are offline first or use a separate computer for working with such documents.</p>
+<p>Don't run bittorrent over Tor since this may betray your real IP address and will consume disproportionate amounts of capacity on the Tor network.</p>
+<p>Make sure you use the latest version of the Tor browser. You will be alerted on the Tor browser homepage when updates are available, or you can click on the green onion in the browser window (to the left of the address bar) to <i>Check for Tor Browser update</i>.</p>
+
+<h3>Install Tor</h3>
+
+<p><b>Mac, Windows</b>:<br>
+Download and install the Tor browser for your operating system at <a href="https://www.torproject.org/" target="blank">https://www.torproject.org/</a> following the installation instructions on the site.</p>
+
+<p><b>Linux/Ubuntu:</b><br>
+<b>1.</b> Download the Tor browser for Linux at <a href="https://www.torproject.org/" target="blank">https://www.torproject.org/</a>, and select <i>Save file</i>. Wait for the download to complete.<br>
+<b>2.</b> In your file directory, go to Downloads (or wherever you saved the download), right click on the Tor download, and select <i>Extract here</i>. Open the extracted file (e.g. <i>tor-browser_en-US</i>), and click <i>Tor browser setup</i>.<br>
+<b>3.</b> You now have the option whether to <i>Connect</i> or <i>Configure</i>. Unless your network provider blocks access to the Tor network (in which case, refer to our next section <i>Bridges</i>), select <i>Connect</i>.<br>
+<b>4.</b> The Tor browser should now launch. The <i>Tor browser setup</i> icon in your file directory should now be <i>Tor browser</i> – this is your Tor launch icon.
+You can drag this icon to the desktop or lock it to the launch bar to make your Tor launcher easily accessible.</p>
+
+<h3>Bridges</h3>
+
+<p>If the network provider you are using (this may be the entire country or just a University network) blocks access to the Tor network, you can use 'bridges' to achieve access.
+Bridges are 'private' Tor relays (nodes or computer points that receive traffic on the Tor network and pass it along) that are less likely to be blocked, and thus help circumvent censorship.<p>
+
+<p><b>1.</b> Launch the Tor Browser.<br>
+<b>2.</b> Click on the green onion (to the left of the address bar) and click <i>Tor Network Settings</i> > tick <i>My ISP blocks connections to the Tor network</i>.<br>
+<b>3.</b> You now have a box to enter one or more <i>bridges</i> - strings of numbers that identify a Tor relay.<br>
+<b>4.</b> To get bridges, go to <a href="https://bridges.torproject.org" target="blank">https://bridges.torproject.org</a> or if you cannot access that site, send an email to bridges@torproject.org, from a gmail.com or yahoo.com email address, with the line <i>get bridges</i> by itself in the body of the message, and bridges should be sent back to you.</p>
+
+<p>Using a bridge can be an extremely slow way of connecting to the internet, but if you need it to circumvent censorship, it works very well.</p>
+
+<hr/>
+<hr/>
+<hr/>
+
+<h1>Chapter 2: Instant Messaging</h1>
+
+<p>Instant messaging is a great way to start and maintain conversations with a source. It is very quick and easy to set up encrypted, 'off-the-record' (OTR) instant messengers (IM) – especially compared to setting up encrypted mail.</p>
+<p>Using an OTR IM, you can discuss necessary security protocols before you continue conversing, meeting, emailing, sharing documents/information, and so on. It is also a useful tool for talking to colleagues if you are collaborating remotely on a project.</p>
+<p>Off-the-record instant messaging allows you to have private conversations that are not only encrypted, but that are not stored, and therefore 'deniable'. That is to say, it is plausible that a chat purportedly including a chat account associated with you, is not actually you.</p>
+
+<p>OTR IM uses public keys that are used to verify a contact really is who they purport to be. However, every time you begin a new chat with a contact (who has been verified by their public key), the chat is
+encrypted using new, throwaway keys. Don't worry – you don't have to do or even see this yourself – this is under-the-bonnet encryption that the messenger client does it for you.</p>
+
+<i>=====================================
+TO TEST
+
+In Pidgin, go to Buddies > Add a buddy and type in their full address before
+clicking 'Add'. When your contact is next online, they will receive an
+authorisation request from you.
+To start a conversation with an online contact, double click on a buddy/contact
+in your list, and click OTR > 'start private conversation' in the chat window.
+Adium
+In Adium, go to Contact in the top toolbar > Add contact. Under 'Contact type',
+assuming your contact is also using Jabber, select XMPP/Jabber, enter their full
+address in 'Jabber ID', and click 'Add'.
+Authenticating/verifying a contact
+Ideally, you will use fingerprint verification and if you know the person well
+enough, you will also ask a question of each other, that only the other person
+would know the answer to.
+60
+May 2016: Version 1.3Pidgin
+If you have not yet authenticated your contact, double click on their address to
+open a chat window with them, go to OTR in the chat window and click
+'Authenticate buddy'. You can authenticate either by
+ A question and answer
+o A good, personalised method
+ A shared secret
+o Has to be pre-arranged via a different communication method
+ Manual fingerprint verification.
+o A useful and strong method
+o The only method by which Adium and Pidgin users can
+authenticate one another
+In that window, select 'Manual fingerprint verification' as the method, and you
+will then see your contact's purported fingerprint. Check the fingerprint – if it is
+ok, select 'I have' verified that this is in fact the correct fingerprint, and click
+'Authenticate'.
+Adium
+If you have not yet authenticated your contact, double click on their address to
+open a chat window with them (even if they appear to be offline – they will
+appear offline and 'not authorised' until you verify them). Click the lock icon and
+select 'Initiate Encrypted OTR chat'. The lock should close. With the chat window
+still open, go to the top toolbar in Adium, click Contact > Encryption > Verify.
+You will then see your contact's purported fingerprint.
+Checking fingerprints
+You should ideally check one another's fingerprints by a communication method
+other than IM (email, phone). If there is not a secure means by which to do this, a
+mutual friend/third party on IM can pass on a partly redacted version of your
+fingerprint to the contact (e.g. 0---A7-0 D—706-D 2—65--1 --3D-9C2 0-57B—1),
+and the contact's fingerprint to you, for you both to check alongside the
+purported fingerprint shown. Redacting parts of your fingerprint may help
+prevent a 'man-in-the-middle' impersonation attack.
+Finding your own fingerprint
+Adium users can find their own fingerprint in Adium > Preferences > Advanced
+(horizontal tab) > Encryption (tab on the left hand side column).
+Pidgin users can find their own fingerprint by opening a chat window with a
+contact, clicking the small buddy icon (right of 'OTR') > Re/Authenticate buddy >
+Manual fingerprint verification.
+Please note: do not allow Adium or Pidgin to automatically remember your
+Jabber password, as it may not be saved securely.
+
+================================</i>
+
+<hr/>
+<hr/>
+<hr/>
+
+<h3>Chapter 3: Email</h3>
+
+<p>Email is very likely the means by which you most frequently contact colleagues and sources. Vitally, it is the means by which a new source could contact you.</p>
+<p>Therefore, having secure email, not only for everyday use with colleagues but as a secure channel for initial contact, is important for any investigative journalist or blogger.</p>
+
+<table border ="1" cellspacing="1" cellpadding="10"><tr><td>
+<h3>The risks to your email communications include an adversary doing any of the following:</h3>
+<ul>
+<li>Reading email content</li>
+<li>Reading subject header</li>
+<li>Seeing who you are contacting, how often and when</li>
+<li>Intercepting email attachments</li>
+<li>“Man in the middle” attacks (an impersonator intercepting communications)</li>
+<li>Seeing where you are emailing from (location)</li>
+</ul>
+<h3>InfoSec action:</h3>
+<ul>
+<li>Use strong passwords</li>
+<li>Use a trustworthy email provider</li>
+<li>Encrypt your email</li>
+<li>Verify your keys</li>
+<li>Put minimal information in your email subjects</li>
+<li>Email from Tails (if/when you need to)</li>
+<li>Use anonymous email addresses for select purposes</li>
+</ul>
+</td></tr></table>
+
+<h3>The risks</h3>
+<p>For protection against most non-state level actors, using a very strong password is a good defence against unauthorised access to your email account. However, for state level actors, it may be no defence at all.</p>
+<p>An email provider that is "trustworthy" is one who has a good basic security infrastructure, and who won't hand over your data to an intelligence agency in a hurry. If you do not trust the country where the email provider is based, it is best not to use an email address there. For example, we know that the default position of the US and UK intelligence agencies is to record and store as many email communications as possible. Even if you don't feel your email communications to be of relevance to these agencies now, they will be retroactively accessible should you and/or your work become relevant in the
+future. So, if you don't trust the US approach to email privacy, be aware that the email providers based there (Outlook, Gmail, Riseup, etc....) may be subject to that approach. Some email providers are thought to be more co-operative than others, but unless you run your own server (or the organisation you work for runs their own server in a country with good privacy laws, like Switzerland or Iceland), we should assume that your emails and email metadata are not secure with any email provider. Other considerations are whether you have to hand over your mobile phone number, a postcode/address, or another of your email addresses in order to register an account with a provider, as you may want to avoid donating that information in future (and especially if/when you use an anonymous email address).<p>
+
+<h3>Email encryption</h3>
+
+<p>You can protect the privacy of your email content by using <i>public key cryptography</i>. Public key cryptography scrambles the content of your email into (thus far) unbreakable code using the recipient's <i>public key</i>. The encrypted email can then only be decrypted using the intended recipient's <i>private key</i>.<br>
+<p>The following instructions recommend the GNU Privacy Guard, "GPG" (an open source implementation of Pretty Good Privacy, or PGP).<br>
+Using GPG, whilst very different to normal emailing, is not difficult and you will get used to it very quickly. Understanding exactly how it works, however, is slightly more challenging.</p>
+<p>You can't encrypt or decrypt email from your smart phone. Whilst it is possible to set up on some Android phones, it is highly inadvisable because mobile phones are fundamentally insecure anyway.<br>
+Neither can you encrypt or decrypt mail in your web browser (unless you are using the Tails operating system) – you will use the Thunderbird email client on your desktop, with the added encryption software, to encrypt and decrypt mail.</p>
+<p>Finally, you can only send encrypted emails to other people who also use encrypted email. This used to be a rather small community of people but in a post-Snowden world, it is growing exponentially.</p>
+
+<h3>Email metadata</h3>
+<p>Metadata is data about data. Email metadata includes both the sender's and recipient's names, emails and IP addresses, server transfer information, date, time and time zone, unique identifier of email and related emails, content type and encoding, mail client login records with IP address, priority and categories, subject of email, status of the email, and any read receipt request.<p>
+<p>This information is extensive and revealing alone, but many intelligence and law enforcement agencies (and in some cases, individual hackers) are also able to retrieve the full email content.
+You can't easily protect the metadata of your emails, so you should be minimalistic or obsfucatory in your subject line, and you may wish to hide your real location/IP address by using the Tor browser.</p>
+<p>Note that email encryption does not hide metadata such as who you are talking to, the email subject, or your location (though you can hide your real location by using Tor/Tails). For people at all risk levels, it is a good idea to be minimalistic or obsfucatory in your subject line.</p>
+
+<h3>Key pairs</h3>
+<p>Keys are essentially unique long sets of numbers, and each user of email encryption has a key pair: a public key, and a private key.</p>
+<p><b>Your public key</b>: Your public key is what people will use to encrypt emails that they send to you.<br>
+Like listing a phone number in the phone book, you can choosewhether to list your public key on the public keyserver or not (if it is a secret or anonymous email account, you may not wish to upload the key to the keyserver). If you choose to list your public key on the keyserver, it will be openly available so that anyone can contact you securely.</p>
+<p><b>Your private key</b>: Your private key allows you to decrypt emails from others who have contacted you using your public key.<br>
+Although your public key is then freely available, the private key in the key pair is exactly that: private!<br>
+A private key corresponds to your public key, ensuring that no one else can have unauthorised use of your public key. You will probably never even see your private key: it lives and works under the bonnet of your GPG software.<br>
+The length, randomness, and sophistication of strong public key cryptography (4096 bit keys, as per our instructions below) are such that the encryption remains, as far as we know, unbreakable.</p>
+
+<h3>Verifying keys</h3>
+<p>Importantly, you should always verify that the keys of the people who you send encrypted mail to really do belong to your intended recipient. Although the email address belongs to the person you want to contact, there is a small chance (at high-risk levels) that their purported public key might not. This is known as a "Man-In-The-Middle" (MITM) attack: the covert interception of communications by the impersonation of a target. You need to make sure that both the email address and the public key definitely belong to the individual concerned. See <i>verifying keys</i> later in this chapter.</p>
+
+<h2>Installation instructions for encrypted email</h2>
+
+<h3>What you need</h3>
+<p><b>Linux/Ubuntu</b>:<br>
+Thunderbird email client and GPG encryption software<br>
+Ubuntu comes pre-loaded with Thunderbird (email client) and GPG encryption software.<br>
+Use the Ubuntu search tool on the top left hand of the desktop to find it.</p>
+<p><b>Mac</b>:<br>
+Download Thunderbird email client and GPG encryption software<br>
+You will need to download:
+<ul>
+<li>An email client/mail manager for your desktop: Mozilla's open source 'Thunderbird'<br>
+<a href="https://www.mozilla.org/en-US/thunderbird/" target="blank">https://www.mozilla.org/en-US/thunderbird/</a></li>
+<li>GPG "Gnu Privacy Guard", which is encryption software<br>
+<a href="https://gpgtools.org/" target="blank">https://gpgtools.org/</a><br>
+The first pink download box, <i>Download GPG suite</i> will be the latest version, click on it to download. Click on the download when complete, and follow the wizard to install.<br>
+When the downloads are complete, open Thunderbird from your Downloads and drag the Thunderbird icon into the Applications folder.</ul></p>
+<p><b>Windows</b>:<br>
+You will need to download:
+<ul>
+<li>An email client/mail manager for your desktop: Mozilla's open source 'Thunderbird'<br>
+<a href="https://www.mozilla.org/en-US/thunderbird/" target="blank">https://www.mozilla.org/en-US/thunderbird/</a><br>
+Once you have downloaded the file, click on your Thunderbird Setup download. Thunderbird will offer you a brief Setup Wizard – select the standard install, confirm the program file location, and click next to complete and finish the install.</li>
+<li>GPG "Gnu Privacy Guard", which is encryption software<br>
+<a href="https://www.gpg4win.org/download.html" target="blank">https://www.gpg4win.org/download.html</a><br>
+The first green download box will be the latest version of GPG: click on it to download. Click on the download when complete, and follow the install wizard to install.</li>
+</ul></p>
+
+<h3>How to install</h3> (all operating systems)<br>
+
+<ul>
+<li><p><b>Thunderbird</b></p>
+
+<b>1.</b> Open Thunderbird. If you are opening Thunderbird for the first time, it may prompt <i>Integration</i> - skip this, and uncheck <i>Always perform this check when starting Thunderbird</i>.<br>
+<b>2.</b> Thunderbird will now prompt you to configure your email account, and offer you a new email address. Click <i>Skip this and use my existing email</i>.<br>
+<b>3.</b> Enter the email address you would like to use for encryption and the password. You should decide whether you select <i>Remember password</i> or not. It may be safer if you don't allow your laptop to remember your password, but you will then need to enter the password every time you access the account on Thunderbird.<br>
+<b>Note</b>: if you are using an anonymous email address, obviously, do not enter your real name!<br>
+<b>4.</b> Click <i>Continue</i>.<br>
+You should see, <i>Configuration found in Mozilla ISP database</i>.<br>
+<b>Troubleshooting</b>: If you receive the error message, <i>Configuration cannot be verified</i>, it may be because your email provider uses two-factor verification (e.g. lots of Gmail accounts use "2-step" verification). In this case, you mail provider may email you, or present a web browser, with a notification of an attempted login via a mail client, and ask for your authentication.<br>
+Alternatively, some Gmail users who use 2-step verification may need obtain an "application-specific password". You can do this on the 'authorizing applications and sites' page on your Google Account settings. For more information, visit: <a href="https://support.google.com/mail/answer/1173270?hl=en" target="blank">https://support.google.com/mail/answer/1173270?hl=en</a><br>
+<b>5.</b> You now have the option to choose between IMAP or POP3. Choose IMAP if you use webmail, and click <i>Done</i>.<br>
+<b>Expert info</b>: Unlike POP, IMAP offers two-way communication between your online email account and your desktop email client – so any changes you make in your email client are communicated back to your online account (e.g. if you mark an email as 'read' on Thunderbird, with IMAP, it will appear as 'read' on your webmail too).</p></li>
+
+<li><p><b>Enigmail security extension</b></p>
+At the top of the Thunderbird window, click on <i>Tools</i> > <i>Add-ons</i> > <i>Extensions</i>. If you see <i>Enigmail</i>, you already have Enigmail. If not, go to the search bar in the
+upper right of the window, and search for <i>Enigmail</i>. Click <i>Install</i>, and restart Thunderbird. When Thunderbird restarts, you can close the <i>Add-ons Manager</i> tab.<br>
+<b>Note</b>: if you do not have a menu bar at the top of the Thunderbird window, right-click on the 3-line menu icon on the top right hand side of the Thunderbird window and tick <i>Menu bar</i>.</li>
+
+<li><p><b>Key pair</b></p>
+<b>1.</b> At the top of the Thunderbird window, click on <i>Enigmail</i> > <i>Key Management</i>.<br>
+<b>2.</b> Back up to the top toolbar, click <i>Generate</i> > <i>New key pair</i><br>
+<b>3.</b> The email address you wish to use for encrypted mail should be selected<br>
+<b>4.</b> Tick <i>Use generated key for the selected identity</i>. Select key to expire in 5 years<br>
+<b>5.</b> Enter a passphrase (this is the passphrase for your encrypted mail, not just your online mail accountm it should be very strong!)<br>
+<b>6.</b> The <i>Comment</i> box adds a public comment to your public key if you list it on the keyserver (so don't use this for a password hint!)<br>
+<b>7.</b> Under <i>Key expiry</i>, the key should expire in two years<br>
+<b>8.</b> Click the <i>Advanced</i> tab, and select the maximum key size of 4096, and Key type <i>RSA</i><br>
+<b>9.</b> Click <i>Generate key</i> and move your mouse around the screen whilst it generates your key (this aids the "randomness pool" from which the key is configured). This may take a few minutes.<br>
+<b>10.</b> A box will appear informing you that the key generation is completed.<br>
+<b>11.</b> Click <i>Generate Certificate</i> in this box (this creates a revocation certificate that you will need when you wish to invalidate your key, for example, if the key pair is lost or compromised). Save the revocation certificate somewhere safe (for example on an encrypted usb stick or CD). You will now be asked to enter your passphrase in order to complete this action.</li>
+
+<li><p><b>Configuring Thunderbird</b></p>
+Go back into Thunderbird to change some settings.<br>
+<p><b>1.</b> Expert Settings<br>
+<i>Enigmail</i> > <i>Preferences</i> > <i>Display Expert Settings</i>
+<ul>
+<li><i>Basic</i> > <i>Passphrase settings</i>: here you should select how long you want Thunderbird to remember your key pair passphrase for</li>
+<li><i>Sending</i>: Select <i>Manual encryption settings</i> and tick<br>
+- <i>Encrypt/sign replies to encrypted/signed messages</i>
+- <i>If possible</i>, under <i>Automatically send encrypted</i>
+- <i>All usable keys</i>, under <i>To send encrypted, accept</i>
+- <i>Always</i>, under <i>Confirm before sending</i><br>
+<b>N.B.</b> this is a very useful tool that tells you every time you send an email whether the email is signed and encrypted, so you are much less likely to accidently send an unencrypted email</li>
+<li>Key Selection: Tick <i>By Per-Recipient Rules</i>, <i>By Email Addresses according to Key Manager</i>, and <i>Manually if Keys are Missing</i><br>
+<b>Advanced</b>: we recommended that you tick <i>Re-wrap signed HTML text before sending</i> as HTML text does not work well with encrypted
+emails.</li></ul>
+Click <i>Ok</i>.<br></p>
+<p><b>2.</b> Saving folders locally<br>
+This is particularly useful for saving drafts: you don't want your draft, unencrypted emails being saved on your online mail folders. Rather, you should save them locally on your hard disk to have more control over their security.<br>
+<ul><li>In the menu bar on the left hand side of the Thunderbird window, you will see all your email folders. At the bottom, are <i>Local Folders</i> – right click and select <i>New Folder</i>. Creating <i>Sent</i> and <i>Draft</i> local folders may be helpful.</li>
+<li>Click <i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i> > <i>Copies & Folders</i>. You can select where to store your messages here. For example, under <i>Drafts and Templates</i>, select <i>Local Folders</i> as the location to keep your message drafts.</li>
+<li>In the same window [<i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i>] click <i>OpenPGP Security</i> tick <i>Encrypt draft messages on saving</i>.</li></ul></p>
+<p><b>3.</b> Email in plain text<br>
+HTML does not encrypt well, so you will write messages in plain text instead.<br>
+<i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i> > <i>Composition & Addressing</i>. Untick <i>Compose messages in HTML format</i><br></p>
+<b>4.</b> Share your PGP signature with contacts<br>
+You should always sign encrypted messages to help the recipient verify that you are the real sender. Sharing your PGP signature with the people you email, even when the email is not encrypted, also helps the recipient (if they also use Enigmail) verify that you are the real sender of the message (not an impersonator). If the recipient does not use PGP encryption, signing unencrypted mail indicates that you usually use PGP encryption, or to the uninformed, it may be mildly confusing!<br>
+<i>Edit</i> (Linux) or <i>Tools</i> (Mac/Windows) > <i>Account Settings</i> > <i>OpenPGP Security</i><br>
+<i>Enable OpenPGP support (Enigmail) for this identity</i> should be ticked.<br>
+Tick <i>sign encrypted messages by default</i>. If you wish, you may select <i>Sign non-encrypted messages by default</i>. Click <i>OK</i>.</li>
+</ul>
+
+<h3>Publicly list your public key</h3>
+<p>Uploading your public key to the keyserver is like listing your phone number in a phonebook. It allows people to search for your name/email address, and locate your public key in order to send you an encrypted email. This is very useful for journalists who invite encrypted mail and wish to protect source confidentiality.</p>
+<p>However, if you are setting up encryption for an anonymous email address that you will use only to communicate with specific, high risk individuals, of course there is little to gain from uploading your public key to the keyserver.</p>
+<h3>DISCLAIMER DISCLAIMER DISCLAIMER</h3>
+<b>1.</b> Go to <i>Enigmail</i> > <i>Key management</i>.<br>
+<b>2.</b> Tick <i>Display All Keys by Default</i>.<br>
+<b>3.</b> Right click your email address, and select <i>Upload Public Keys to Keyserver</i> if you want people to be able to contact you.<br>
+The default keyserver (pool.sks-keyservers.net) is fine.</p>
+
+<h3>To search for anyone's public key</h3>
+<p>Search for a name/email address to see if a person has a public key listed, so you can send them encrypted mail (like searching for a number in a phonebook).</p>
+<p><i>Enigmail</i> > <i>Key management</i> > <i>Keyserver</i> (in the top toolbar) > <i>Search for keys</i>.<br>
+Enter the person's name or email address and browse the results. Tick the email address of anyone whose key you'd like to import and press ok.</p>
+
+<h3>Import a key</h3>
+<p>If you already have your contact's key on a file or online, but need to import it to your key manager on Thunderbird.
+<ul><li><b>Importing a key from file</b>:<br>
+In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i>.<br>
+Now go back up to the top toolbar to click on <i>File</i> > <i>Import keys from file</i>.</li>
+<li><b>Importing a key from email</b>:<br>
+If your contact has attached their public key in an email, right-click on the .asc attachment and click <i>Import OpenPGP Key</i>.</li>
+<li><b>Importing a key from a public key block</b>:<br>
+Many people have their full public key "block" (i.e. the full public key in text) on their website. This allows people to trust the website as the source of the key rather than the keyserver, and may help prevent man-in-the-middle attacks.<br>
+Simply copy the whole key block (the entire block, as shown highlighted in yellow below), then in Thunderbird go to <i>Enigmail</i> > <i>Key management</i> > (back up the top toolbar) <i>Edit</i> > <i>Import keys from clipboard</i> and click <i>Import</i> in the confirmation box.<br>
+A public key block looks like this: <a href="http://pool.sks-keyservers.net/pks/lookup?op=get&search=0x4C5980F4BB86A00A" target="blank">http://pool.sks-keyservers.net/pks/lookup?op=get&search=0x4C5980F4BB86A00A</a></li></ul>
+
+
+<h3>Verifying keys</h3>
+<p>Make sure that the person you think you are communicating with is certainly who they say they are.</p>
+<p>In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i> > right-click a selected email address > <i>Key Properties</i>. Here you will see the person's key ID and fingerprint.<p>
+<p>You can verify that the key does indeed belong to the person by exchanging fingerprints by another communication means (in person, on the phone, on their business card/website), and checking they match exactly.</p>
+<p>In the same window you can then click <i>Select Action</i> > <i>Set Owner Trust</i> > and select how much you trust that the key does in fact belong to the individual concerned.
+<h1>ADD SIGNING</h1>
+
+<h3>Send an encrypted email!</h3>
+<p>When you have completed the set up, send a test email to someone else who has encrypted mail. Import their key or find it on the keyserver, and be sure to verify it and sign your trust of their key before you try to send an email.</p>
+<p>Choose a recipient whose key you have already imported, verified, and set owner trust for. Write your email, and before you click <i>Send</i>, either click on the padlock icon to close it and encrypt the message.
+<h1>add pic</h1>
+<p>Press <i>Send</i>, and the confirmation box should tell you that the email is both signed and encrypted (if not, go back and check you ticked to encrypt).<br>
+Click <i>Send Message</i>, and your encrypted email will be sent!</p>
+<p>Now that you have sent this person an encrypted email, a default setting should be created whereby all future emails to this contact will automatically encrypt.</p>
+
+<h3>Share your public key with an individual</h3>
+<p>The first time you send a contact an encrypted email, you should attach your public key so that they can respond by encrypting an email back to your key. In the email compose window, to the right of the encryption padlock and signing pencil icons, there is an option to <i>Attach My Public Key</i>. Select this to attach your public key to the email. Alternatively, click <i>Enigmail></i> > <i>Attach My Public
+Key</i>.
+
+<h3>Protecting your identity and location when emailing</h3>
+<p>At higher risk levels, for those who wish to hide the real identities of themselves and/or others communicating, anonymous email accounts should be used, unassociated with any other aspect of your online identity - they should not be connected with you in any way. Gmail and Hotmail tend to request a phone or alternate email address, so these providers are not ideal for anonymous accounts. In many countries, GMX and Yandex, allow users to create accounts without such identifying information.</p>
+However, if you create an anonymous email address from an internet connection that is associated with you, your anonymity may already be compromised. Furthermore, when you send and receive emails, you are doing so by connecting to the internet, thus your location is known by the internet provider (and potentially, an adversary). If you want your identity and location to be anonymous, you can use an anonymous account to send unencrypted emails through webmail on the Tor browser ; or you can use the Tails operating system, which hides the real location of all of your laptop's communications with the internet. Tails' desktop email client (which supports encryption) sends and receives information/mail to and from the internet through Tor, thus hiding the real location of the connection.
+You might only want to protect your location in the field rather than identity per se. For this, using the Tails operating system is the only answer.</p>
+
+
+
+
+
+
