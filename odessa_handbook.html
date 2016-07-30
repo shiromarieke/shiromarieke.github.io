@@ -593,4 +593,98 @@ It is wise to have separate Tails USB sticks for separate projects, to spread yo
 If appropriate, you could also give a prepared Tails USB stick to your source, with a few instructions, so they have secure means of communicating with you.<br>
 In high risk scenarios, you may wish to use Tails on an entirely separate machine to your usual laptop.</p>
 
+<h2>Using Tails</h2>
+
+<table border ="1" cellspacing="1" cellpadding="10"><tr><td>
+<b>Booting from USB<b>
+<p>You need to set your machine to boot from USB – a setting that is<br>
+located in the BIOS menu of your laptop. You can access the BIOS<br>
+menu as your machine powers up. Before attempting this, you may<br>
+wish to search online to find out which key to press to access the<br>
+BIOS menu on your particular laptop. On many machines an<br>
+<i>entering setup</i> message appears as it powers up, informing you<br>
+that you can press [key] to enter BIOS/setup/system configuration,<br>
+in which case you can follow that instruction. It is often a key such<br>
+as f1, F2, F3, F12 or DEL.<br>
+You may also wish to research how, via your particular machine’s<br>
+BIOS menu, to boot the machine from the USB drive. Insert the USB<br>
+stick into the laptop whilst switched off, then boot up and enter the<br>
+BIOS menu. This setting may be in a menu item such as <i>Startup</i> ><br>
+<i>Boot</i>; or a menu tab such as <i>Boot</i>, <i>Boot options</i>, or <i>Boot selection<br>
+menu</i>. Select your USB drive, or make sure your USB drive is top of<br>
+any boot priority order (if an item on the list has a <i>+</i> it means it<br>
+has a submenu, where your USB listing may be hiding!). You can<br>
+often change the order using + and – keys. Navigate to the <i>Exit</i> or<br>
+<i>Save and exit</i> menu, and select <i>Exit saving changes</i> (or similar)<br>
+option to make sure your boot preference has been saved.<br>
+So: power up the laptop with the USB stick already inserted, enter<br>
+the BIOS menu, and opt to boot from your USB drive.<br>
+</td></tr></table>
+
+<p>When you boot up in Tails, you will see a screen load up with options <i>Live</i> and <i>Live failsafe</i>.<br>
+Use the arrow keys to highlight <i>Live</i> and hit the enter key.</p>
+<p>You will then be offered, <i>More options?</i>. It is not essential that you enter this menu, unless you need to configure Tails to circumvent Tor censorship.<br>
+Otherwise you can select no, ‘Login’, and start exploring Tails.<br>
+If you do select yes for more options, you will see:
+<ul>
+<li><i>Administrative password</i>. It is unlikely you would need to create one unless you want to access the internal hard disk of the computer (which is not recommended, and can lead to unnecessary security risks).</li>
+<li><i>Spoof all MAC addresses</i>, which should be automatically selected. This is a good option to hide the serial numbers of your network cards, and thus is another function that helps to hide your location.</li>
+<li><i>Network configuration</i>, under which you have two options: connect directly to the Tor network, or <i>This computer’s internet connection is censored, filtered or proxied. You need to configure bridge, firewall or proxy settings</i>. If your network does not allow Tor connections, select the latter.</li>
+<li><i>Disable all networking</i> if you wish to have offline use</li></ul></p>
+<h2>Using Tails via bridges/circumventing censorship</h2>
+<p>This helps people to connect to the Tor network in situations where their network disallows Tor connections. Bridges are Tor relays (nodes or computer points that receive traffic on the Tor network and pass it along) that help circumvent censorship.</p>>
+<p>When you boot up using the Tails USB stick and are offered <i>More options?</i>,select <i>Yes</i> and continue.</p>
+
+<p>Under <i>Network configuration</i>, select <i>This computer’s internet connection is censored, filtered of proxied. You need to configure bridge, firewall or proxy settings</i>.<br>
+Then, when you connect to the internet the Tor browser bundle window will appear asking the same question.<br>
+If the latter option applies, click <i>Configure</i>. You’ll be asked if your ISP blocks / censors connections to the Tor network. If you need to configure bridges, select <i>yes</i> here and press next.</p>
+<p>You now have a box to enter one or more <i>bridges</i>: strings of numbers that identify a Tor relay. To get bridges, go to <a href="https://bridges.torproject.org" target="blank">https://bridges.torproject.org</a> or if you cannot access that site, send an email to bridges@torproject.org from a gmail.com or yahoo.com email address, with the line <i>get bridges</i> by itself in the
+body of the message, and some should be sent back to you. Using a bridge can be an extremely slow way of connecting to the internet, but if you need it to circumvent censorship, it works very well.</p>
+
+<h2>Creating a persistent volume in Tails</h2>
+<p>Creating persistent storage space on your Tails USB stick.</p>
+<p>To create a persistent volume in Tails, go to <i>Applications</i> > <i>Tails</i> > <i>Configure persistent volume</i>.<br>
+Once you have entered a (very strong) password, you can choose what types of files you will save in the persistent volume. You could select all types, to keep your options open.<br>
+Now, every time you boot up with the Tails USB stick, you will be asked two questions: <i>Use persistence?’</i> and <i>More options?</i> (as before). If you click <i>Yes</i> to
+<i>use persistence</i> and enter the password, you can access any data (e.g. configured email client, IM client, password manager, or files) you have saved to the persistent volume in previous sessions.</p>
+
+<h2>OpenPGP encryption applet</h2>
+<p>Because all internet connections on Tails run through the Tor network, connections to your email provider via your email client will also be run through Tor. Users of some email providers sometimes have problems configuring their email accounts with Icedove through Tails, because the connection is re-routed through the Tor network to disguise your location.<br>
+Tails offers an alternative method you can use to encrypt email and email attachments.</p>
+<p>Rather than using an email client to encrypt the entire email, you can highlight text and encrypt it to the desired recipient’s key, before pasting the encrypted text into an email (e.g. when composing email on the web browser).</p>
+<ul>
+<li><b>Import contact’s public key</b><br>
+Go to the OpenPGP encryption applet (the clipboard icon in the top right of the top menu toolbar) > <i>Manage keys</i> > then either <i>Remote</i> > <i>Find remote keys</i> (if you do not already have the person’s key). Enter the contact’s name, and click search.<br>
+Or<br>
+<i>File</i> > <i>Import</i> (if you have the key already saved in a file).</li>
+<li><b>Encrypt the text</b><br>
+<i>Applications</i> (left on the top menu toolbar) > <i>Accessories</i> > <i>gedit Text Editor</i>.<br>
+Type your message. Then select all (Ctrl + A) and copy (Ctrl + C, or right click > <i>copy</i>) the message to the clipboard.<br>
+Go to the OpenPGP encryption applet > <i>Sign/encrypt Clipboard with Public Keys</i> > select the recipient of your email (you need to have already imported their key), sign the message as the email address
+from which you will be sending the email, and click OK.<br>
+Then paste the message (Ctrl + V) into the composing window in your email account, and send.<br>
+Note that you have encrypted the message to only allow decryption by the desired recipient. This means that once encrypted, you cannot decrypt it to read it yourself. Therefore, if you use this method, it is a good idea to select your own public key, as well as that of the recipient of the email, when you encrypt the message. You will then be able to decrypt it if you want to read your sent messages.</li>
+<li><b>Decrypt the text</b><br>
+Select the encrypted text that you want to decrypt. Include the lines <i>-----BEGIN PGP MESSAGE-----</i> and <i>-----END PGP MESSAGE-----</i>.<br>
+Copy the text to the clipboard (Ctrl + C, or right click > <i>copy</i>).<br>
+The OpenPGP Applet (clipboard icon) now shows a padlock, meaning that it contains encrypted text.
+If the text that you selected is only signed but not encrypted, the OpenPGP Applet now shows a seal, meaning that the clipboard contains signed text.<br>
+Click on the OpenPGP Applet (clipboard icon) and select <i>Decrypt/Verify Clipboard</i> from the menu. The decrypted text appears in the Output of GnuPG text box.</li>
+<li><b>Encrypting email attachments</b><br>
+It is easy to encrypt files using public keys and to send these as email attachments with Tails.<br>
+Right click the desired file > <i>Encrypt</i> > tick the recipient’s email address (sign the message as the address from which you will send the email) > <i>OK</i>.<br>
+You will now see a duplicate of the selected file, with the <i>.pgp</i> extension: this means it is an encrypted file.<br>
+Attach the .pgp file to your email,which can only be decrypted and opened by your chosen recipient.</li></ul>
+
+<h2>Upgrading Tails</u2>
+<p>Your Tails system should automatically look for, and download, updates. It is important to keep your system updated.<br>
+After booting Tails and connecting to Tor, if an upgrade is available, a dialog box appears and proposes you to upgrade the system.</p>
+<p>However, it can often take a while for Tails to connect to the internet after booting, in which case it may be unable to check for upgrades at start up.<br>
+You can check for upgrades anytime by opening the Terminal (black box icon on the top toolbar on the Tails desktop) and typing the following command</p>
+<p><body style="background-color:powderblue;"><font face="courrier">tails-upgrade-frontend-wrapper</font></body></p>
+And press enter. Tails will check for updates, or inform you whether your system
+is up to date.
+More information on upgrading Tails, and troubleshooting when Tails does not
+upgrade automatically, can be found on the Tails website:
+https://tails.boum.org/doc/first_steps/upgrade/index.en.html
 
