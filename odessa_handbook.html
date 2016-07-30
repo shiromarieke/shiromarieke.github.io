@@ -1,7 +1,6 @@
 
 to add: 
 - tails
-- linux/ubuntu?
 - signal (phones?)
 - mobile security
 https://www.bof.nl/2014/07/30/how-your-innocent-smartphone-passes-on-almost-your-entire-life-to-the-secret-service/
@@ -513,7 +512,7 @@ into it in the same way you would a USB drive (go to My Computer or
 Finder and click and drag files into the container).
 Once you have put the desired files in the container, 'close' the container
 by clicking 'Dismount' in VeraCrypt. The container will now appear to be
-just a file on your computer.</p></li>
+just a file on your computer.</p></li></ul>
 
 <hr/>
 <hr/>
@@ -537,5 +536,61 @@ If you are concerned about focused surveillance and attempts to intercept your s
 When the download is complete, or when the sender closes OnionShare, the files are completely removed from the internet (unless you untick <i>Stop sharing automatically</i> in OnionShare, which enables the files to be downloaded multiple times).</p>
 <p>Further instructions for use can be found here: <a href="https://github.com/micahflee/onionshare" target="blank">https://github.com/micahflee/onionshare</a></p>
 
+<hr/>
+<hr/>
+<hr/>
+8
+<h1>Chapter : Operating systems</h1>
+
+<p>If your hardware is secure against automated and pre-positioned surveillance, it is vital to prevent the introduction of software that will make the system vulnerable again. Even if you are operating at low-risk levels, using the right software can help protect the security of your data and communications from automated and dragnet surveillance.</p>
+<p>The most important software on a computer, in addition to the firmware, is the operating system. This is the software that takes control of the computer as it boots up and is the interface through which you use the computer. In short, the operating system tells the computer what to do, and how to do it. Popular operating systems include versions of Windows (e.g. XP, Vista, 8, 10), OS X (for Mac), and Linux distributions.</p>
+<p>We now know that intelligence agencies often have access to "backdoors" in popular operating systems, which enable them to gain covert access to users’ data.</p>
+<table border ="1" cellspacing="1" cellpadding="10"><tr><td>
+<h3>Threats associated with operating systems:</h3>
+<ul>
+<li>Malware, viruses</li>
+<li>Surveillance ‘backdoors’ within an operating system, accessible to the intelligence community</li></ul>
+<h3>Two key measures are important for protection against operating system threats:</h3>
+<li>Use an open source operating system (for medium risk)</li>
+<li>Use Tails, an amnesic, incognito operating system (for high - top risk)</li></ul>
+</td></tr></table>
+<p>To increase confidence that your operating system does not have potential surveillance "backdoors" (i.e. that it cannot be abused for surveillance purposes), it should be <b>open source’</b>. Open source software is freely distributed software for which the source-code, the very fabric of the operating system, is "open" and publicly available. This allows independent experts to view the source code anytime, and verify that there are no security flaws in the makeup of the operating system. A full, ten-point definition is available at <a href="https://opensource.org/osd" target="blank">www.opensource.org/osd</a>.<br>
+Furthermore, open source operating systems are less susceptible to malware (malicious software, typically spyware) and viruses. This is because they are much less frequently used than proprietary operating systems and have a correspondingly low market share.<br>
+Open source software is also known as "free software", not only for the freedom of access to its source code, but because it is also distributed on a free/donations-only basis.<br>
+It should be noted that open source software is only as trustworthy as the trust one puts in the expertise and frequency with which the source code is created and examined. However, open source software that is widely used is more likely to be frequently examined, and is preferable (at least for InfoSec purposes) to closed source software.</p>
+<p>Operating systems by Microsoft and Apple (e.g. Windows, OS X) are closed source, and are expected to contain surveillance backdoors accessible to GCHQ, the NSA and allied interests. Microsoft’s operating systems are particularly unsuitable, since more of its code is closed source than Apple’s code, and their systems are more susceptible to malware and viruses. Such closed source operating systems are unsuitable for important data and communications if you think you, or someone you are communicating with, could be (or become) a target of surveillance.</p>
+
+<h2>Linux</h2>
+<p>Linux is the leading open source, community developed, operating system. There are many different versions of Linux operating systems that you can use: Ubuntu, Debian, Fedora, Arch, etc.</p>
+
+<h2>Tails</h2>
+<a href="https://tails.boum.org/">https://tails.boum.org/</a>
+<p>Use an amnesic, incognito operating system for the greatest security: Tails. Tails stands for "The Amnesic Incognito Live System".<br>
+It is an open source, Linux-based operating system that protects users’ privacy and anonymity.</p>
+<p><b>Amnesic</b>: because no trace of your computer use is left on the system after shut down<br>
+<b>Incognito</b>: because it is privacy and security orientated, accessing internet anonymously by default, and thus circumventing any censorship</p>
+<p>Tails is purposefully designed as an anti-surveillance system, and comes with several built-in (entirely open source) security-oriented applications:
+<ul>
+<li><h3>Built-in online anonymity</h3><br>
+<p>Once connected to the internet, various software on our computers frequently send and receive packets of data via the internet, whether in active use or not. We know that intelligence agencies routinely surveil this network activity and are working to increase this surveillance. However, all software on Tails is configured to connect to the internet anonymously, via Tor, thus protecting you from network surveillance.</p>
+<p>Furthermore, the in-built Tor web browser includes popular security extensions like HTTPS Encryption and HTTPS Everywhere which encrypt your browsing data; Adblock Plus to block ads and tracking; and NoScript to block harmful JavaScript and Flash (as they can compromise anonymity).<br>
+Using Tails on its high security settings can mean some web features won’t work, but it is a worthwhile compromise for an incomparable privacy gain when working on sensitive projects. Alternatively, you can lower the security settings (in Tor’s security slider) or use the "Unsafe Browser" on Tails.</p>
+<p><b>Note</b>: if you use the unsafe browser, or attempt to log in to an online account that is clearly linked to your real identity on any browser, you will compromise your anonymity for that entire Tails session. Shutdown and restart Tails every time you use a new identity. Files and documents can also contain metadata that may indicate your location via GPS.</p></li>
+<li><h3>Built-in encrypted email and chat</h3>
+<p>Tails offers in-built encrypted and private messaging. Tails includes the Icedove (Thunderbird) email client with OpenPGP for email encryption and the instant messaging client Pidgin which supports private and anonymous messaging.</p></li>
+<li><h3>Built-in file encryption</h3>
+<p>Tails comes with LUKS, to encrypt files. If you want to store files on the same USB stick you are running Tails from, you can create permanent storage space, or a ‘persistent volume’ on the USB stick.<br> Tails will encrypt the persistent volume by default, requesting your password to view or access any of the files stored.</p>
+<p><b>Expert info<b>: Whilst the persistent volume is useful for storing relatively unimportant information and documents, you should not use it to store or transport the most sensitive documents. This is because the persistent volume is not "hidden". That is, should an adversary obtain the USB stick, they will be able to see that an encrypted volume exists on the device, and they may force or trick you into
+giving them the password.</p></li>
+<li><h3>Built in password protection</h3>
+<p>Tails comes preloaded with KeePassX, a password manager that stores usernames and passwords in an encrypted, local database, protected by your master password.<br>
+It also comes with PWGen, a strong random password generator.</p></li></ul>
+
+<p>Tails is designed for use from a USB stick independently of the computer's original operating system. This means that you can remove your laptop’s hard disk drive (recommended for high-risk work), but still boot up the laptop through a Tails USB stick. Alternatively, you can put a Tails USB stick into a computer with the hard disk drive intact, and boot up via Tails: the machine will ignore the original hard disk and operating system, and run from the USB drive with Tails instead.</p>
+<p>The provision of a ‘mini system’ on a Tails USB stick makes it ideal for sensitive journalistic projects. Your machine can essentially be "clean" with no trace of your work on there, and your documents can be stored on the highly portable, inexpensive USB stick.<br>
+<p>Tails even comes preloaded with open source editing software such as LibreOffice for creating, reading and editing documents, PiTiVifor editing videos, and Audacity for editing sound.</p>>
+It is wise to have separate Tails USB sticks for separate projects, to spread your identity trace and minimise the risk, should you lose a USB stick.<br>
+If appropriate, you could also give a prepared Tails USB stick to your source, with a few instructions, so they have secure means of communicating with you.<br>
+In high risk scenarios, you may wish to use Tails on an entirely separate machine to your usual laptop.</p>
 
 
