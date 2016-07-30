@@ -497,6 +497,10 @@ Randomly move your mouse around for a moment, before clicking <i>Format</i>.<br>
 The program will now create the volume. Depending on the size, chosen encryption algorithm and speed of your computer this will take a few seconds to hours (for very large volumes).<br>
 <b>7.</b> Once the system is finished press <i>Exit</i> to return to the main program screen.<br>
 Congratulations - you have created your secure volume!</p></li>
+<li><p><b>Encrypt an entire external hard drive such as a USB stick</b><br>
+Step 1: elect <i>Create Volume</i> > <i>Create a volume within a partition/drive</i><br>
+Of course, you will need VeraCrypt to decrypt the USB drive, so if you are planning to decrypt on a computer on which VeraCrypt is not installed, you may wish to just create an encrypted container on the USB drive with your files, and also save VeraCrypt on the USB drive.<br>
+Then follow the instructions above.</p></li>
 <li><p>Put the files you want to encrypt into your new encrypted volume Now the volume can be "mounted" (i.e. activated).<br>
 Select any slot or drive.<br>
 Click <i>Select File</i> > locate and select the volume you just made > click <i>Mount</i>.<br>
@@ -510,56 +514,23 @@ by clicking 'Dismount' in VeraCrypt. The container will now appear to be
 just a file on your computer.</p></li>
 
 
-<li><p><b>Encrypt an entire external hard drive such as a USB stick</b><br>
-Step 1: elect <i>Create Volume</i> > <i>Create a volume within a partition/drive</i><br>
-Of course, you will need VeraCrypt to decrypt the USB drive, so if you are planning to decrypt on a computer on which VeraCrypt is not installed, you may wish to just create an encrypted container on the USB drive with your files, and also save VeraCrypt on the USB drive.<br>
-Then follow the instructions above.</p></li>
+<h1>Chapter 7: File sharing</h1>
 
-Encrypting hard drives
-Mac and Linux systems have inbuilt options to encrypt the entire hard drive.
-Linux/Ubuntu:
-You will notice in our guidance on Ubuntu installation (chapter 2), we instructed
-you to opt to ‘encrypt the Ubuntu installation’ and ‘encrypt the home folder’.
-These options encrypt the entire hard drive and the home directory with
-separate passwords.
-Mac:
-Go to System Preferences > Security and Privacy > FileVault > Turn on FileVault
-Windows:
-The most secure way to encrypt a hard drive on a Windows system is using
-VeraCrypt.
-
-
-
-OnionShare
-https://onionshare.org
-OnionShare is an open source tool that lets you securely and anonymously (over
-the Tor network) share a file of any size.
-OnionShare offers a secure method of file-sharing because it allows users to
-share files directly from computer to computer, across Tor connections, without
-uploading files to any third party’s server. Instead, the sender’s computer
-becomes the server for the purpose of the transfer.
-OnionShare is easy to install and use on Windows, Mac, Ubuntu and Tails.
-Installation on Ubuntu does require minimal use of the command line. You can
-download OnionShare and find installation instructions here:
-https://onionshare.org
-Using OnionShare:
-To send files using OnionShare, you must have the Tor browser running in the
-background. You must also use the Tor browser to download files shared via
-OnionShare.
-The sender chooses the files they wish to share, and OnionShare makes the files
-available for download via a URL, accessible via the Tor browser. As the recipient
-downloads the file, the sender can see the download progress and completion.
-If you are concerned about focused surveillance and attempts to intercept your
-shared files, you should be careful to share the URL with your contact securely
-(for example, over encrypted OTR chat or encrypted email) and anonymously
-(for example, using new anonymous throwaway email accounts created on the
-Tor browser).
-When the download is complete, or when the sender closes OnionShare, the files
-are completely removed from the internet (unless you untick ‘Stop sharing
-automatically’ in OnionShare, which enables the files to be downloaded multiple
-times).
-Further instructions for use can be found here:
-https://github.com/micahflee/onionshare
+<h2>OnionShare</h>
+<a href="https://onionshare.org" target="blank">https://onionshare.org</a>
+<p>OnionShare is an open source tool that lets you securely and anonymously (over the Tor network) share a file of any size.</p>
+<p>OnionShare offers a secure method of file-sharing because it allows users to share files directly from computer to computer, across Tor connections, without uploading files to any third party’s server. Instead, the sender’s computer becomes the server for the purpose of the transfer.</p>
+<p>OnionShare is easy to install and use on Windows, Mac, Ubuntu and Tails.<br>
+Installation on Ubuntu does require minimal use of the command line. <br>
+You can download OnionShare and find installation instructions here: <a href="https://onionshare.org" target="blank">https://onionshare.org</a></p>
+<h3>Using OnionShare:</h3>
+<p>To send files using OnionShare, you must have the Tor browser running in the background.<br>
+You must also use the Tor browser to download files shared via OnionShare.</p>
+<p>The sender chooses the files they wish to share, and OnionShare makes the files available for download via a URL, accessible via the Tor browser.<br>
+As the recipient downloads the file, the sender can see the download progress and completion.<br>
+If you are concerned about focused surveillance and attempts to intercept your shared files, you should be careful to share the URL with your contact securely (for example, over encrypted OTR chat or encrypted email) and anonymously (for example, using new anonymous throwaway email accounts created on the Tor browser).<br>
+When the download is complete, or when the sender closes OnionShare, the files are completely removed from the internet (unless you untick <i>Stop sharing automatically</i> in OnionShare, which enables the files to be downloaded multiple times).</p>
+<p>Further instructions for use can be found here: <a href="https://github.com/micahflee/onionshare" target="blank">https://github.com/micahflee/onionshare</a></p>
 
 
 
