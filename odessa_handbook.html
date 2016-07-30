@@ -2,13 +2,8 @@
 to add: 
 - tails
 - linux/ubuntu?
-- veracrypt
-- onionshare
-- physical erasure?
-- metadata
 - signal (phones?)
 - mobile security
-- passwords
 https://www.bof.nl/2014/07/30/how-your-innocent-smartphone-passes-on-almost-your-entire-life-to-the-secret-service/
 
 
@@ -140,7 +135,68 @@ Bridges are 'private' Tor relays (nodes or computer points that receive traffic 
 <hr/>
 <hr/>
 
-<h1>Chapter 2: Instant Messaging</h1>
+<h1>Chapter 2: Passwords</h1>
+
+<p>Passwords are a key line of defence at all levels of information security.<br>
+However, bear in mind that passwords to online accounts are mainly a defence against non-state hackers (who are also able to obtain increasingly sophisticated commercial password cracking programs). There may be backdoor access at a state level to your online accounts, ultimately rendering a password irrelevant.<br>
+So, whilst strong passwords are always a good idea, passwords that protect your system (e.g. hard disk encryption) and your encryption programs are far more important than passwords to online accounts.</p>
+
+<table border ="1" cellspacing="1" cellpadding="10"><tr><td>
+<h3>Risks:</h3>
+<ul>
+<li>Forgetting and losing passwords</li>
+<li>Overriding passwords by backdoor access (online accounts)</li>
+<li>Hacking (relatively unsophisticated password hacking)</li>
+<li>Password cracking (sophisticated)</li>
+<li>Key logger</li>
+<li>Being coerced into revealing a password</li></ul>
+<h3>InfoSec action:</h3>
+<ul>
+<li>Learn how to create strong passwords</li>
+<li>Use KeePassX password manager (if you trust your system). KeePassX is an open source password manager<br>
+that can generate and store usernames and passwords in an encrypted, local database, protected by your master password.
+<li>Store the most important passwords in your head only</li></ul>
+</td></tr></table>
+
+<h3>Schneier scheme</h3>
+<p>You should use manually created passwords to encrypt your whole system, any encrypted USB stick or highly important file (e.g. source documents), and your password manager. These important passwords should be stored in your human memory only, and therefore need to be memorable.<br>
+Of course, to minimalise any damage should a password be compromised, you should avoid re-using passwords.</p>
+<p>To manually create a password, we recommend the "Schneier scheme", a method advocated by Bruce Schneier, the internationally renowned cryptographer and security expert.<br>
+Schneier advises taking a memorable sentence and initialising, symbolising, and numbering the words to turn it into a password.</p>
+<p>For example, "This little piggy went to market" might become "tlpWENT2m".<br>
+That nine-character password won't be in anyone's dictionary. Choose your own sentence, something personal, but not obviously related to you through public data.<br>
+Here are some examples:
+<ul>
+<li>WIw7,mstmsritt... = When I was seven, my sister threw my stuffed rabbit in the toilet.</li>
+<li>Wow...doestcst = Wow, does that couch smell terrible.</li>
+<li>Ltime@go-inag~faaa! = Long time ago in a galaxy not far away at all.</li>
+<li>uTVM,TPw55:utvm,tpwstillsecure = Until this very moment, these passwords were still secure.</li></ul>
+<p>(Of course, do not use any of the above examples: now that they have been used, they are invalid as strong password options).</p>
+
+<h3>Using KeePassX</h3>
+<p>KeePassX is a password manager that stores usernames and passwords in a local encrypted database, protected by a master password. It also comes with PWGen, a strong random password generator.</p>
+
+<h1>HOW TO INSTALL</h1>
+<p><b>To create a new password database</b>:<br>
+<i>File</i> > </i>New database</i><br>
+Create a strong master password that will protect your password database.<br>
+You can then name your database file and choose the location where it will be saved.</p>
+<p><b>To create a new password group</b>:<br>
+<i>Groups</i> > <i>New groups</i><br>
+(e.g. "email" group, for your email usernames and passwords)</p>
+<p>To add a new password</b>:<br>
+Click on a group > <i>Entries</i> > <i>Add new entry</i><br>
+Here you have the option of entering a password, or generating a random one (click <i>Gen</i>).<br>
+If you click on the eye icon, you can see the text of the password. Otherwise, it will remain obscured.</p>
+<p><b>To retrieve a password</b>:<br>
+When you have added a password to a group, you can right click on the desired password and select <i>copy password to clipboard</i>. You can then paste it in to a login form.</p>
+
+<hr/>
+<hr/>
+<hr/>
+
+<h1>Chapter 3: Instant Messaging</h1>
+
 
 <p>Instant messaging is a great way to start and maintain conversations with a source. It is very quick and easy to set up encrypted, 'off-the-record' (OTR) instant messengers (IM) – especially compared to setting up encrypted mail.</p>
 <p>Using an OTR IM, you can discuss necessary security protocols before you continue conversing, meeting, emailing, sharing documents/information, and so on. It is also a useful tool for talking to colleagues if you are collaborating remotely on a project.</p>
@@ -212,7 +268,7 @@ Jabber password, as it may not be saved securely.
 <hr/>
 <hr/>
 
-<h3>Chapter 3: Email</h3>
+<h3>Chapter 4: Email</h3>
 
 <p>Email is very likely the means by which you most frequently contact colleagues and sources. Vitally, it is the means by which a new source could contact you.</p>
 <p>Therefore, having secure email, not only for everyday use with colleagues but as a secure channel for initial contact, is important for any investigative journalist or blogger.</p>
@@ -364,7 +420,7 @@ Tick <i>sign encrypted messages by default</i>. If you wish, you may select <i>S
 <h3>Publicly list your public key</h3>
 <p>Uploading your public key to the keyserver is like listing your phone number in a phonebook. It allows people to search for your name/email address, and locate your public key in order to send you an encrypted email. This is very useful for journalists who invite encrypted mail and wish to protect source confidentiality.</p>
 <p>However, if you are setting up encryption for an anonymous email address that you will use only to communicate with specific, high risk individuals, of course there is little to gain from uploading your public key to the keyserver.</p>
-<b>We do not recommend uploading your first key to the server immediately after you have generated it. In the process of learning, people often compromise their first key pair or lose access to it. If you can afford taking some time to get used to email encryption, consider not publishing your key during the learning process. Instead, try to send encrypted emails (to friends, colleagues) on a regular basis and upload your key to the keyserver after a few weeks of practice.</b>
+<p><b>We do not recommend uploading your first key to the server immediately after you have generated it.</b> In the process of learning, people often compromise their first key pair or lose access to it. If you can afford taking some time to get used to email encryption, consider not publishing your key during the learning process. Instead, try to send encrypted emails (to friends, colleagues) on a regular basis and upload your key to the keyserver after a few weeks of practice.</p>
 <b>1.</b> Go to <i>Enigmail</i> > <i>Key management</i>.<br>
 <b>2.</b> Tick <i>Display All Keys by Default</i>.<br>
 <b>3.</b> Right click your email address, and select <i>Upload Public Keys to Keyserver</i> if you want people to be able to contact you.<br>
@@ -391,18 +447,17 @@ A public key block looks like this: <a href="http://pool.sks-keyservers.net/pks/
 
 <h3>Verifying keys</h3>
 <p>Make sure that the person you think you are communicating with is certainly who they say they are.</p>
-<p>In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i> > right-click a selected email address > <i>Key Properties</i>. Here you will see the person's key fingerprint.<p>
-<p>You can verify that the key does indeed belong to the person by exchanging fingerprints by another communication means (ideally in person, if not possible, on the phone, on their website), and checking they match exactly.</p>
+<p>In Thunderbird, go to <i>Enigmail</i> > <i>Key management</i> > right-click a selected email address > <i>Key Properties</i>. Here you will see the person's key fingerprint.<br>
+You can verify that the key does indeed belong to the person by exchanging fingerprints by another communication means (ideally in person, if not possible, on the phone, on their website), and checking they match exactly.</p>
 <p>In the same window you can then click <i>Certify</i> > select if and how well you have checked the fingerprint. To avoid uploading this signature by mistake on the keyservers, we recommend cheching the <i>Local signature</i> box. Then click <i>OK</i>.<br>
-<p>In the same windows you can also click <i>Change</i> and select how much you trust that the key does in fact belong to the individual concerned. Then click <i>OK</i>.</p>
+In the same windows you can also click <i>Change</i> and select how much you trust that the key does in fact belong to the individual concerned. Then click <i>OK</i>.</p>
 
 <h3>Send an encrypted email!</h3>
 <p>When you have completed the set up, send a test email to someone else who has encrypted mail. Import their key or find it on the keyserver, and be sure to verify it and sign your trust of their key before you try to send an email.</p>
-<p>Choose a recipient whose key you have already imported, verified, and set owner trust for. Write your email, and before you click <i>Send</i>, either click on the padlock icon to close it and encrypt the message.
+<p>Choose a recipient whose key you have already imported, verified, and set owner trust for. Write your email, and before you click <i>Send</i>, click on the padlock icon to close it and encrypt the message. Make sure the pen icon next to the padlock icon is selected too: it confirms that your message is signed. Both icons should be yellow.</p>
 <h1>add pic</h1>
 <p>Press <i>Send</i>, and the confirmation box should tell you that the email is both signed and encrypted (if not, go back and check you ticked to encrypt).<br>
 Click <i>Send Message</i>, and your encrypted email will be sent!</p>
-<p>Now that you have sent this person an encrypted email, a default setting should be created whereby all future emails to this contact will automatically encrypt.</p>
 
 <h3>Share your public key with an individual</h3>
 <p>The first time you send a contact an encrypted email, you should attach your public key so that they can respond by encrypting an email back to your key. In the email compose window, to the right of the encryption padlock and signing pencil icons, there is an option to <i>Attach My Public Key</i>. Select this to attach your public key to the email. Alternatively, click <i>Enigmail></i> > <i>Attach My Public
@@ -414,7 +469,97 @@ However, if you create an anonymous email address from an internet connection th
 You might only want to protect your location in the field rather than identity per se. For this, using the Tails operating system is the only answer.</p>
 
 
+<h1>Chapter 6: File and disk encryption</h1>
+<h2>VeraCrypt</h2>
+<p>VeraCrypt is open source encryption software.<br>
+<p>VeraCrypt works the same on Windows, Mac and Linux systems and the encrypted containers are cross-compatible between these systems. This allows you to work securely with other people without having to know what system they use.</p>
+<p>VeraCrypt allows you to create an encrypted "container" that acts as a digital strongbox for files, locked by a password.<br>
+Once this box is created and filled with files it can be moved to an external storage device such as a USB drive, or sent over the internet to others.<br>
+Even if the file is intercepted, the strongbox will not reveal its contents to anyone who does not have the password.</p>
+<p><b>Important!</b> Do not forget your password, there is no other way to get to your data once it is encrypted. Losing you password means losing your data!</p>
 
+<h3>Encrypt with VeraCrypt</h3>
+<ul>
+<li><b>Download</b><br>
+Download VeraCrypt from <a href="https://veracrypt.codeplex.com/" target="blank">https://veracrypt.codeplex.com/</a><br> (and, if on Mac, FUSE for OS X: <a href="https://osxfuse.github.io/" target="blank">https://osxfuse.github.io/</a>)) and install on your system like any other application.</li>
+<li><p><b>Create an encrypted volume</b><br>
+<b>1.</b> To create an encrypted "volume" (like a folder) start the program and click <i>Create Volume</i> > <i> Create an encrypted file container</i> > select <i>Standard VeraCrypt volume</i> > select the location where the container will be stored on your computer (it can be moved later) and give the container an (innocuous) name.<br>
+<b>2.</b> The next screen is titled <i>Encryption Options</i>. The default selections are fine.<br>
+For the strongest encryption (encrypts multiple times), under <i>Encryption Algorithm</i>, select <i>AES twoFish-Serpent</i>, and under <i>Hash Algorithm</i>, select <i>SHA-512</i>.<br>
+<b>3.</b> The next screen is titled <i>Volume size</i>.<br>
+Select the size of the container (this will determine the maximum amount of data that can be put into it).<br>
+<b>4.</b> Set the volume password on the next screen. Make a good one and Do. Not. Forget!<<br>
+<b>5.</b> The next screen is titled "Format Options". Select FAT.<br>
+<b>Expert info</b>: FAT is compatible with all systems but is limited in the maximum size of files it can contain (individual files cannot be larger than 4 GB). Usually this should not be a problem.<br>
+If you need to be able to store larger files and are certain that choosing something other than FAT will not create problems with the sharing of the files, you could choose one of the other options.<br>
+<b>6.</b> The program will now generate a random dataset to encrypt the volume.<br>
+Randomly move your mouse around for a moment, before clicking <i>Format</i>.<br>
+The program will now create the volume. Depending on the size, chosen encryption algorithm and speed of your computer this will take a few seconds to hours (for very large volumes).<br>
+<b>7.</b> Once the system is finished press <i>Exit</i> to return to the main program screen.<br>
+Congratulations - you have created your secure volume!</p></li>
+<li><p>Put the files you want to encrypt into your new encrypted volume Now the volume can be "mounted" (i.e. activated).<br>
+Select any slot or drive.<br>
+Click <i>Select File</i> > locate and select the volume you just made > click <i>Mount</i>.<br>
+Now enter the password and click <i>OK</i>.</br>
+The VeraCrypt container will now appear on your system as a separate
+drive (much like a USB drive or external hard disk), and you can put files
+into it in the same way you would a USB drive (go to My Computer or
+Finder and click and drag files into the container).
+Once you have put the desired files in the container, 'close' the container
+by clicking 'Dismount' in VeraCrypt. The container will now appear to be
+just a file on your computer.</p></li>
+
+
+<li><p><b>Encrypt an entire external hard drive such as a USB stick</b><br>
+Step 1: elect <i>Create Volume</i> > <i>Create a volume within a partition/drive</i><br>
+Of course, you will need VeraCrypt to decrypt the USB drive, so if you are planning to decrypt on a computer on which VeraCrypt is not installed, you may wish to just create an encrypted container on the USB drive with your files, and also save VeraCrypt on the USB drive.<br>
+Then follow the instructions above.</p></li>
+
+Encrypting hard drives
+Mac and Linux systems have inbuilt options to encrypt the entire hard drive.
+Linux/Ubuntu:
+You will notice in our guidance on Ubuntu installation (chapter 2), we instructed
+you to opt to ‘encrypt the Ubuntu installation’ and ‘encrypt the home folder’.
+These options encrypt the entire hard drive and the home directory with
+separate passwords.
+Mac:
+Go to System Preferences > Security and Privacy > FileVault > Turn on FileVault
+Windows:
+The most secure way to encrypt a hard drive on a Windows system is using
+VeraCrypt.
+
+
+
+OnionShare
+https://onionshare.org
+OnionShare is an open source tool that lets you securely and anonymously (over
+the Tor network) share a file of any size.
+OnionShare offers a secure method of file-sharing because it allows users to
+share files directly from computer to computer, across Tor connections, without
+uploading files to any third party’s server. Instead, the sender’s computer
+becomes the server for the purpose of the transfer.
+OnionShare is easy to install and use on Windows, Mac, Ubuntu and Tails.
+Installation on Ubuntu does require minimal use of the command line. You can
+download OnionShare and find installation instructions here:
+https://onionshare.org
+Using OnionShare:
+To send files using OnionShare, you must have the Tor browser running in the
+background. You must also use the Tor browser to download files shared via
+OnionShare.
+The sender chooses the files they wish to share, and OnionShare makes the files
+available for download via a URL, accessible via the Tor browser. As the recipient
+downloads the file, the sender can see the download progress and completion.
+If you are concerned about focused surveillance and attempts to intercept your
+shared files, you should be careful to share the URL with your contact securely
+(for example, over encrypted OTR chat or encrypted email) and anonymously
+(for example, using new anonymous throwaway email accounts created on the
+Tor browser).
+When the download is complete, or when the sender closes OnionShare, the files
+are completely removed from the internet (unless you untick ‘Stop sharing
+automatically’ in OnionShare, which enables the files to be downloaded multiple
+times).
+Further instructions for use can be found here:
+https://github.com/micahflee/onionshare
 
 
 
