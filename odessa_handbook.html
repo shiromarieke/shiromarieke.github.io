@@ -175,7 +175,13 @@ Here are some examples:
 <h3>Using KeePassX</h3>
 <p>KeePassX is a password manager that stores usernames and passwords in a local encrypted database, protected by a master password. It also comes with PWGen, a strong random password generator.</p>
 
-<h1>HOW TO INSTALL</h1>
+<p><b>Linux/Ubuntu</b>:<br>
+<p>You can download KeepassX here: <a href="https://www.keepassx.org/downloads" target="blank">https://www.keepassx.org/downloads</a>.<br>
+On Mac, follow the instructions to install. Default installation is fine.<br>
+On Windows, extract the file and then follow the instructions. Default installation is fine.</p>
+
+<p><b>Linux/Ubuntu</b>:<br>
+<p>Download KeepassX directly in the software manager.</p>
 <p><b>To create a new password database</b>:<br>
 <i>File</i> > </i>New database</i><br>
 Create a strong master password that will protect your password database.<br>
@@ -204,14 +210,16 @@ When you have added a password to a group, you can right click on the desired pa
 <p>OTR IM uses public keys that are used to verify a contact really is who they purport to be. However, every time you begin a new chat with a contact (who has been verified by their public key), the chat is
 encrypted using new, throwaway keys. Don't worry – you don't have to do or even see this yourself – this is under-the-bonnet encryption that the messenger client does it for you.</p>
 
-ADD JABBER
+<p>You can use OTR encryption for different kinds of chat protocols. We recommend using jabber.</p>
 
 <h3>Install Tor-messenger</h3>
 
-ONE LINE WHY TOR
+<p>In this handbook we will explain how to use Tor-messenger, a messenging client that automatically connects over Tor.<br>
+<p>Alternatively you could use Pidgin (Windows, Linux) or Adium (Mac).<br>
+You can find a tutorial on <a href="http://tcij.org/resources/handbooks/infosec/chapter-6-instant-messaging" target="blank">http://tcij.org/resources/handbooks/infosec/chapter-6-instant-messaging</a>.</p>
 
 <p><b>Mac, Windows</b>:<br>
-Download and install the Tor browser for your operating system at <a href="XXX" target="blank">https://www.torproject.org/</a> following the installation instructions on the site.</p>
+Download and install the Tor browser for your operating system at <a href="https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger#Downloads" target="blank">https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger#Downloads</a> following the installation instructions on the site.</p>
 
 <p><b>Linux/Ubuntu:</b><br>
 Download the Tor browser for Linux at <a href="https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger#Downloads" target="blank">https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger#Downloads</a>, and select <i>Save file</i>. Wait for the download to complete.<br>
@@ -225,9 +233,15 @@ You can drag this icon to the desktop or lock it to the launch bar to make your 
 
 <h3>Create an IM account</h3>
 
+<p>Like e-mail, Jabber is decetralized: you can pick an existing server of your choice or run your own.<br>
+The registration for some servers happens directly in your chat client, for others you can or need to register an account in a browser.<br>
+You can find a list of free, public and secure Jabber servers on <a href="https://xmpp.net/directory.php" target="blank">https://xmpp.net/directory.php</a>. Make sure you pick a server with good security grades.</p>
 
-
-pselect xmpp?systemli.org?under services, jabber?scroll down?register an account?pick username?pick strong password?answer questions?note: different servers, url?
+<p>In this handbook we will user Systemli Jabber server.<br>
+To register an accout, visit <a href="https://www.systemli.org/en/service/xmpp.html" target="blank">https://www.systemli.org/en/service/xmpp.html</a>.
+Scroll down and click <i>Register an account</i>. 
+Enter the username of your choice and a strong password, then answer the question.<br>
+Your account is now registered; your Jabber address will look like this: username@jabber.systemli.org.</p>
 
 <h3>Add your account to Tor-messenger</h3>
 <p>When youo start Tor-messenger for the first time, the <i>Account Wizard</i> window should open automatically.<br>
@@ -283,7 +297,7 @@ The fingerprint for your contact will be saved.</p>
 <hr/>
 <hr/>
 
-<h3>Chapter 4: Email</h3>
+<h1>Chapter 4: Email</h1>
 
 <p>Email is very likely the means by which you most frequently contact colleagues and sources. Vitally, it is the means by which a new source could contact you.</p>
 <p>Therefore, having secure email, not only for everyday use with colleagues but as a secure channel for initial contact, is important for any investigative journalist or blogger.</p>
@@ -486,7 +500,7 @@ You might only want to protect your location in the field rather than identity p
 <hr/>
 <hr/>
 <hr/>
-<h1>Chapter 6: File and disk encryption</h1>
+<h1>Chapter 5: File and disk encryption</h1>
 <h2>VeraCrypt</h2>
 <p>VeraCrypt is open source encryption software.<br>
 <p>VeraCrypt works the same on Windows, Mac and Linux systems and the encrypted containers are cross-compatible between these systems. This allows you to work securely with other people without having to know what system they use.</p>
@@ -534,7 +548,7 @@ just a file on your computer.</p></li></ul>
 <hr/>
 <hr/>
 
-<h1>Chapter 7: File sharing</h1>
+<h1>Chapter 6: File sharing</h1>
 
 <h2>OnionShare</h2>
 <a href="https://onionshare.org" target="blank">https://onionshare.org</a>
@@ -556,7 +570,7 @@ When the download is complete, or when the sender closes OnionShare, the files a
 <hr/>
 <hr/>
 
-<h1>Chapter 8: Operating systems</h1>
+<h1>Chapter 7: Operating systems</h1>
 
 <p>If your hardware is secure against automated and pre-positioned surveillance, it is vital to prevent the introduction of software that will make the system vulnerable again. Even if you are operating at low-risk levels, using the right software can help protect the security of your data and communications from automated and dragnet surveillance.</p>
 <p>The most important software on a computer, in addition to the firmware, is the operating system. This is the software that takes control of the computer as it boots up and is the interface through which you use the computer. In short, the operating system tells the computer what to do, and how to do it. Popular operating systems include versions of Windows (e.g. XP, Vista, 8, 10), OS X (for Mac), and Linux distributions.</p>
